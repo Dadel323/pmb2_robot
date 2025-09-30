@@ -19,15 +19,16 @@ mobile_base_controller:
 
     # Velocity commands timeout [s]
     cmd_vel_timeout: 0.25
-
+    open_loop: false
     # Base frame_id
     base_frame_id: base_footprint
+    velocity_rolling_window_size: 2
 
     # odom tf will be published by direct laser odometry
-    enable_odom_tf: true
+    enable_odom_tf: false
 
     # Publish limited velocity
-    publish_limited_velocity: true
+    publish_limited_velocity: false
 
     # Velocity and acceleration limits
     # Whenever a min_* is unspecified, default to -max_*
@@ -44,3 +45,7 @@ mobile_base_controller:
         max_velocity           : 1.05 # 60.0º
         has_acceleration_limits: true
         max_acceleration       : 1.05 # 60.0º
+        has_jerk_limits        : false
+        max_jerk               : 10.47 # 600.0º
+
+

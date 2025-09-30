@@ -20,10 +20,10 @@
   <!-- ARGUMENTS -->
 
   <!-- no-laser, hokuyo, sick-551, sick-561, sick-571-->
-  <xacro:arg name="laser_model" default="sick-571"/>
+  <xacro:arg name="laser_model" default="no-laser"/>
 
   <!-- false, true -->
-  <xacro:arg name="has_sonars" default="true"/>
+  <xacro:arg name="has_sonars" default="false"/>
 
   <!-- false, true -->
   <xacro:arg name="has_microphone" default="false"/>
@@ -42,11 +42,11 @@
   <!-- PROPERTIES -->
 
   <!-- HW configuration -->
-  <xacro:property name="laser_model" value="$(arg laser_model)" />
-  <xacro:property name="has_sonars" value="$(arg has_sonars)" />
-  <xacro:property name="has_microphone" value="$(arg has_microphone)" />
-  <xacro:property name="add_on_module" value="$(arg add_on_module)"/>
-  <xacro:property name="camera_model" value="$(arg camera_model)" />
+  <xacro:property name="laser_model" value="no-laser" />
+  <xacro:property name="has_sonars" value="false" />
+  <xacro:property name="has_microphone" value="false" />
+  <xacro:property name="add_on_module" value="no-add-on"/>
+  <xacro:property name="camera_model" value="no-camera" />
 
   <!-- HW configuration check -->
   <xacro:if value="${laser_model not in ['no-laser', 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">

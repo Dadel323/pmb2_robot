@@ -39,14 +39,14 @@
 
     <!-- Odometry plugin for ground truth -->
     <gazebo>
-      <plugin filename="libgazebo_world_odometry.so" name="gazebo_ros_odometry">
-        <ros>
-          <namespace>${namespace}</namespace>
-        </ros>
-        <frame_name>world</frame_name>
-        <body_name>base_footprint</body_name>
-        <topic_name>ground_truth_odom</topic_name>
-        <update_rate>100.0</update_rate>
+      <plugin filename="libgz-sim8-odometry-publisher-system.so"
+              name="gz::sim::systems::OdometryPublisher">
+        <publish_tf>true</publish_tf>
+        <link_name>pmb2::base_footprint</link_name>    <!-- the robot link to track -->
+        <odom_frame>odom</odom_frame>
+        <robot_base_frame>base_footprint</robot_base_frame>
+        <publish_rate>50</publish_rate>        <!-- Hz -->
+        <use_sim_time>true</use_sim_time>
       </plugin>
     </gazebo>
 

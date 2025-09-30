@@ -71,7 +71,7 @@ def declare_actions(
         },
     )
 
-    launch_description.add_action(twist_mux)
+    #launch_description.add_action(twist_mux)
 
     robot_state_publisher = include_scoped_launch_py_description(
         pkg_name='pmb2_description',

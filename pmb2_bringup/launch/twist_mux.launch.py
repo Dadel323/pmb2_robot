@@ -61,6 +61,7 @@ def declare_actions(
             'config_joy': os.path.join(pkg_dir, 'config', 'twist_mux', 'joystick.yaml'),
             'use_sim_time': launch_args.use_sim_time,
             'namespace': launch_args.namespace,
+            'use_stamped': 'false',
         }
     )
 
