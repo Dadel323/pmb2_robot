@@ -19,7 +19,7 @@ mobile_base_controller:
 
     # Velocity commands timeout [s]
     cmd_vel_timeout: 0.25
-    open_loop: false
+    open_loop: true
     # Base frame_id
     base_frame_id: base_footprint
     velocity_rolling_window_size: 2
