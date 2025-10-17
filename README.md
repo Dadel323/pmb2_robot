@@ -1,4 +1,4 @@
-```markdown
+
 
 # TIAGo Base (or PMB2)
 
@@ -8,6 +8,8 @@ TIAGo Base is a compact Autonomous Mobile Robot (AMR) designed for quick setup, 
 
 ## Fork notes
 
-This fork (by @Dadel323) includes local modifications: I adjusted some parameters and updated the robot URDF and the Gazebo launch file to work with Gazebo Harmonic. These changes are focused on getting the simulation to run on the Harmonic release and include tweaks to relevant parameters, URDF links/joints, and the Gazebo launch configuration.
-## Research and Publications
-```
+This fork (by @Dadel323) includes local modifications:
+- Adjustment of parameters for own simulation
+- Updated URDF and Launch File to work with gazebo Harmonic and ROS2 Jazzy
+
+
